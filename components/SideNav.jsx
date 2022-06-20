@@ -17,6 +17,7 @@ import {
   AspectRatio,
   View,
   Pressable,
+  ScrollView,
 } from "native-base";
 
 const navLinks = [
@@ -77,23 +78,26 @@ export default function SideNav() {
           janedoe41@mydomain.com
         </Text>
       </Center>
-      <VStack p="16px">
-        {navLinks.map((link) => (
-          <Pressable
-            onPress={() => console.log(link.value)}
-            key={link.value}
-            borderRadius="5px"
-            _hover={{
-              bg: "#EDE9FE",
-              _text: { color: "#4C1D95" },
-              _dark: { bg: "#1F2937" },
-            }}
-            p="10px"
-          >
-            <Text>{link.label}</Text>
-          </Pressable>
-        ))}
-      </VStack>
+      <ScrollView>
+        <VStack p="16px">
+          {navLinks.map((link) => (
+            <Pressable
+              onPress={() => console.log(link.value)}
+              key={link.value}
+              borderRadius="5px"
+              _hover={{
+                bg: "#EDE9FE",
+                _text: { color: "#4C1D95" },
+                _dark: { bg: "#1F2937" },
+              }}
+              p="10px"
+            >
+              <Text>{link.label}</Text>
+            </Pressable>
+          ))}
+        </VStack>
+      </ScrollView>
+
       <VStack
         borderTopWidth="1px"
         _light={{
