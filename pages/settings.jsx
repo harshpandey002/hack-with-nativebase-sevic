@@ -22,6 +22,7 @@ import Layout from "../components/Layout";
 import BackIcon from "../components/Icons/BackIcon";
 import CloudIcon from "../components/Icons/CloudIcon";
 
+//TODO Constants
 const settings = [
   { label: "Change password", value: "change_password" },
   { label: "General", value: "general" },

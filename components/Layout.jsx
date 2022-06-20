@@ -16,11 +16,12 @@ import {
   Button,
   AspectRatio,
   View,
+  ScrollView,
 } from "native-base";
 import Header from "./Header";
 import SideNav from "./SideNav";
 
-export default function Layout({ children }) {
+export default function Layout({ children, hideSideNav }) {
   return (
     <Box
       _light={{
@@ -32,12 +33,21 @@ export default function Layout({ children }) {
       h="100vh"
     >
       <Header />
-      <HStack alignItems="center" flex={1}>
-        <SideNav />
-        <Box p="32px" flex={1} h="100%">
-          {children}
-        </Box>
-      </HStack>
+
+      <ScrollView>
+        <HStack alignItems="center" flex={1}>
+          {!hideSideNav && <SideNav />}
+          <Box
+            p="32px"
+            flex={1}
+            h="100%"
+            maxW={hideSideNav ? "1016px" : ""}
+            m="auto"
+          >
+            {children}
+          </Box>
+        </HStack>
+      </ScrollView>
     </Box>
   );
 }

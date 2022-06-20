@@ -20,6 +20,7 @@ import {
   ScrollView,
 } from "native-base";
 
+//TODO Constants
 const navLinks = [
   { label: "Contacts", value: "contacts" },
   { label: "Groups", value: "groups" },
