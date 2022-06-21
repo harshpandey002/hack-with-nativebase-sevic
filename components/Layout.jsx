@@ -22,6 +22,7 @@ import Header from "./Header";
 import SideNav from "./SideNav";
 import BackIcon from "./Icons/BackIcon";
 import MobHeader from "./MobHeader";
+import PageInfo from "./PageInfo";
 
 export default function Layout({ children, hideSideNav, pageTitle }) {
   return (
@@ -47,6 +48,8 @@ export default function Layout({ children, hideSideNav, pageTitle }) {
             maxW={hideSideNav ? "1016px" : ""}
             m="auto"
           >
+            <PageInfo pageTitle={pageTitle} />
+
             {children}
           </Box>
         </HStack>

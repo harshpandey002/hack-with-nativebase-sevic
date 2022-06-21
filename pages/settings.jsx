@@ -21,6 +21,7 @@ import {
 import Layout from "../components/Layout";
 import BackIcon from "../components/Icons/BackIcon";
 import CloudIcon from "../components/Icons/CloudIcon";
+import PageInfo from "../components/PageInfo";
 
 //TODO Constants
 const settings = [
@@ -34,13 +35,9 @@ const settings = [
 
 export default function Settings() {
   return (
-    <Layout>
-      <HStack alignItems="center" space="14px" marginBottom="16px">
-        <BackIcon />
-        <Text fontSize="18px" fontWeight="500">
-          Settings
-        </Text>
-      </HStack>
+    <Layout pageTitle="Settings">
+      <PageInfo pageTitle="Settings" />
+
       <VStack
         py="20px"
         marginBottom="32px"
@@ -63,6 +60,8 @@ export default function Settings() {
       <HStack
         _light={{ bg: "white" }}
         _dark={{ bg: "#1f2937" }}
+        w={["93%", "93%", "93%", "100%"]}
+        mx="auto"
         borderRadius="4px"
         py="12px"
         px="16px"

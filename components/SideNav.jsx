@@ -35,6 +35,7 @@ const navLinks = [
 export default function SideNav() {
   return (
     <VStack
+      display={["none", "none", "none", "flex"]}
       borderWidth="1px"
       borderLeftWidth="0px"
       _light={{

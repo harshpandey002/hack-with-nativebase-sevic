@@ -26,7 +26,6 @@ import PageInfo from "../components/PageInfo";
 export default function Product() {
   return (
     <Layout hideSideNav pageTitle="Body Suit">
-      <PageInfo pageTitle="Body Suit" />
       <Stack
         direction={["column", "column", "column", "row"]}
         borderRadius={[0, 0, "5px"]}
