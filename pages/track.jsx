@@ -98,17 +98,26 @@ export default function Track() {
 }
 
 function Status({ title, desc, time, isPending, isLast }) {
+  const { colorMode } = useColorMode();
+
+  const getIconColor = () => {
+    if (isPending && colorMode === "dark") return "#9CA3AF";
+    if (!isPending && colorMode === "dark") return "#8B5CF6";
+    if (isPending && colorMode !== "dark") return "#C4B5FD";
+    if (!isPending && colorMode !== "dark") return "#4C1D95";
+  };
+
   return (
     <VStack
       paddingLeft="26px"
       paddingBottom="16px"
       borderLeftWidth={isLast ? "0px" : "1px"}
-      borderColor={isPending ? "#C4B5FD" : "#4C1D95"}
+      borderColor={getIconColor()}
       borderStyle={isPending ? "dashed" : "solid"}
       position="relative"
     >
       <Box position="absolute" left="-8px">
-        <CheckIcon fill={isPending ? "#C4B5FD" : "#4C1D95"} />
+        <CheckIcon fill={getIconColor()} />
       </Box>
       <Text
         fontWeight="500"
