@@ -18,22 +18,19 @@ import {
   View,
   Progress,
   Pressable,
+  Stack,
 } from "native-base";
 import Layout from "../components/Layout";
-import BackIcon from "../components/Icons/BackIcon";
+import PageInfo from "../components/PageInfo";
 
 export default function Product() {
   return (
-    <Layout hideSideNav>
-      <HStack alignItems="center" space="14px" marginBottom="16px">
-        <BackIcon />
-        <Text fontSize="18px" fontWeight="500">
-          Body Suit
-        </Text>
-      </HStack>
-      <HStack
-        borderRadius="5px"
-        p="32px"
+    <Layout hideSideNav pageTitle="Body Suit">
+      <PageInfo pageTitle="Body Suit" />
+      <Stack
+        direction={["column", "column", "column", "row"]}
+        borderRadius={[0, 0, "5px"]}
+        p={["16px", "16px", "16px", "32px"]}
         space="16px"
         _light={{ bg: "white" }}
         _dark={{ bg: "#1f2937" }}
@@ -46,11 +43,11 @@ export default function Product() {
         >
           <Image
             borderRadius="5px"
-            size={468}
-            height={552}
+            size={["auto", "auto", "auto", "468px"]}
+            height={["246px", "246px", "246px", "552"]}
             resizeMode="cover"
             source={{
-              uri: "https://source.unsplash.com/500x600",
+              uri: "https://images.unsplash.com/photo-1567822781105-a80d1b601697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
             }}
             fallbackSource={{
               uri: "https://www.w3schools.com/css/img_lights.jpg",
@@ -88,7 +85,7 @@ export default function Product() {
             </Pressable>
           </HStack>
           <HStack alignItems="center" space="8px">
-            {["New Born", "Tiny Baby", "0-3"].map((size) => (
+            {["New Born", "Tiny Baby", "0-3 M"].map((size) => (
               <Box
                 borderRadius="4px"
                 _light={{ bg: "#F5F3FF" }}
@@ -126,7 +123,7 @@ export default function Product() {
           </HStack>
           <TabComponent />
         </VStack>
-      </HStack>
+      </Stack>
     </Layout>
   );
 }

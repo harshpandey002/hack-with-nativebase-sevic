@@ -20,8 +20,10 @@ import {
 } from "native-base";
 import Header from "./Header";
 import SideNav from "./SideNav";
+import BackIcon from "./Icons/BackIcon";
+import MobHeader from "./MobHeader";
 
-export default function Layout({ children, hideSideNav }) {
+export default function Layout({ children, hideSideNav, pageTitle }) {
   return (
     <Box
       _light={{
@@ -33,12 +35,13 @@ export default function Layout({ children, hideSideNav }) {
       h="100vh"
     >
       <Header />
+      <MobHeader pageTitle={pageTitle} />
 
       <ScrollView>
         <HStack alignItems="center" flex={1}>
           {!hideSideNav && <SideNav />}
           <Box
-            p="32px"
+            p={["0px", "0px", "0px", "32px"]}
             flex={1}
             h="100%"
             maxW={hideSideNav ? "1016px" : ""}

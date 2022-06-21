@@ -16,16 +16,18 @@ import {
   Button,
   AspectRatio,
   View,
+  Progress,
+  Pressable,
 } from "native-base";
-import MenuIcon from "./Icons/MenuIcon";
+import BackIcon from "./Icons/BackIcon";
 import ThemeButton from "./ThemeButton";
 
-export default function Header() {
+export default function MobHeader({ pageTitle }) {
   return (
     <HStack
-      display={["none", "none", "none", "flex"]}
+      display={["flex", "flex", "flex", "none"]}
       _light={{
-        bg: "white",
+        bg: "#4c1d95",
       }}
       _dark={{
         bg: "#111827",
@@ -33,26 +35,11 @@ export default function Header() {
       p="20px 35px"
       justifyContent="space-between"
     >
-      <HStack alignItems="center" space="12px">
-        <MenuIcon _light={{ color: "black" }} _dark={{ color: "white" }} />
-        <Heading
-          fontSize="24px"
-          _light={{
-            color: "#8b5cf6",
-          }}
-          _dark={{ color: "#885cfc" }}
-        >
-          HackWith
-          <Heading
-            fontSize="24px"
-            _light={{
-              color: "black",
-            }}
-            _dark={{ color: "white" }}
-          >
-            NativeBase
-          </Heading>
-        </Heading>
+      <HStack alignItems="center" space="14px">
+        <BackIcon />
+        <Text fontSize="18px" fontWeight="500" color="white">
+          {pageTitle}
+        </Text>
       </HStack>
       <HStack alignItems="center" space="16px">
         <ThemeButton />
