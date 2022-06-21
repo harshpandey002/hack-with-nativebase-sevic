@@ -36,8 +36,6 @@ const settings = [
 export default function Settings() {
   return (
     <Layout pageTitle="Settings">
-      <PageInfo pageTitle="Settings" />
-
       <VStack
         py="20px"
         marginBottom="32px"
