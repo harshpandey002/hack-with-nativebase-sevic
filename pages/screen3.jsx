@@ -1,31 +1,17 @@
-import React from "react";
 import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
   Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
-  Progress,
+  HStack,
+  Image,
   Stack,
+  Text,
+  useColorMode,
+  VStack,
 } from "native-base";
-import Layout from "../components/Layout";
-import BackIcon from "../components/Icons/BackIcon";
-import CloudIcon from "../components/Icons/CloudIcon";
-import PageInfo from "../components/PageInfo";
+import React from "react";
 import CheckIcon from "../components/Icons/CheckIcon";
+import Layout from "../components/Layout";
 
-export default function Track() {
+export default function Screen3() {
   return (
     <Layout pageTitle="Track Order">
       <Stack

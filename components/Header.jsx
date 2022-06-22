@@ -1,22 +1,5 @@
 import React from "react";
-import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
-  Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
-} from "native-base";
+import { Image, HStack, Heading, Box } from "native-base";
 import MenuIcon from "./Icons/MenuIcon";
 import ThemeButton from "./ThemeButton";
 

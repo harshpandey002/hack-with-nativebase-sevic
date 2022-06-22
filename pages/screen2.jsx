@@ -1,29 +1,19 @@
-import React, { useState } from "react";
 import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
   Box,
-  Link,
-  VStack,
   Button,
-  AspectRatio,
-  View,
-  Progress,
+  Center,
+  HStack,
+  Image,
   Pressable,
   Stack,
+  Text,
+  VStack,
 } from "native-base";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
-import PageInfo from "../components/PageInfo";
+import { tabs } from "../util/constants";
 
-export default function Product() {
+export default function Screen2() {
   return (
     <Layout hideSideNav pageTitle="Body Suit">
       <Stack
@@ -36,15 +26,16 @@ export default function Product() {
       >
         <Box
           p="8px"
+          minH="246px"
           borderRadius="5px"
           _dark={{ bg: "#374151" }}
           _light={{ bg: "#F5F3FF" }}
         >
           <Image
             borderRadius="5px"
-            size={["auto", "auto", "auto", "468px"]}
-            height={["246px", "246px", "246px", "552"]}
-            resizeMode="cover"
+            size={["full", "full", "full", "468px"]}
+            // h={["246px", "246px", "246px", "552px"]}
+            flex={1}
             source={{
               uri: "https://images.unsplash.com/photo-1567822781105-a80d1b601697?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
             }}
@@ -126,22 +117,6 @@ export default function Product() {
     </Layout>
   );
 }
-
-//TODO Constants
-const tabs = [
-  {
-    id: 1,
-    label: "Description",
-    value:
-      "Yellow bodysuit, has a round neck with envelope detail along the shoulder, short sleeves and snap button closures along the crotch. Yellow bodysuit, has a round neck with envelope detail along the shoulder, short sleeves and snap button closures along the crotch.Yellow bodysuit, has a round neck with envelo",
-  },
-  {
-    id: 2,
-    label: "Reviews",
-    value:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nobis accusantium minus hic veritatis tenetur! Praesentium odit molestiae dicta quia?",
-  },
-];
 
 function TabComponent() {
   const [tab, setTab] = useState(tabs[0]);

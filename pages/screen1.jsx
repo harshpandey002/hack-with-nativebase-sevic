@@ -1,39 +1,10 @@
+import { Button, HStack, Progress, Text, VStack } from "native-base";
 import React from "react";
-import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
-  Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
-  Progress,
-} from "native-base";
-import Layout from "../components/Layout";
-import BackIcon from "../components/Icons/BackIcon";
 import CloudIcon from "../components/Icons/CloudIcon";
-import PageInfo from "../components/PageInfo";
+import Layout from "../components/Layout";
+import { settings } from "../util/constants";
 
-//TODO Constants
-const settings = [
-  { label: "Change password", value: "change_password" },
-  { label: "General", value: "general" },
-  { label: "Manage Accounts", value: "manage_accounts" },
-  { label: "Language", value: "language", applied: "English" },
-  { label: "Linked Accounts", value: "linked_accounts" },
-  { label: "Disable Accounts", value: "disable_accounts" },
-];
-
-export default function Settings() {
+export default function Screen1() {
   return (
     <Layout pageTitle="Settings">
       <VStack

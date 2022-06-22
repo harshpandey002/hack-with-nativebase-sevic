@@ -1,89 +1,9 @@
+import { Center, HStack, Stack, Text, VStack } from "native-base";
 import React from "react";
-import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
-  Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
-  Progress,
-  Stack,
-} from "native-base";
 import Layout from "../components/Layout";
-import BackIcon from "../components/Icons/BackIcon";
-import CloudIcon from "../components/Icons/CloudIcon";
-import PageInfo from "../components/PageInfo";
-import CheckIcon from "../components/Icons/CheckIcon";
+import { portfolio, portfolioLabels } from "../util/constants";
 
-const portfolio = [
-  {
-    company_name: "Aditya Birla Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Axis Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Aditya Birla Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Axis Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Aditya Birla Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Axis Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Aditya Birla Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-  {
-    company_name: "Axis Sun Life Flexi Cap- Fund",
-    investment: "$50,000",
-    current_value: "$4,351.50",
-    returns: "14%",
-  },
-];
-
-const portfolioLabels = [
-  { label: "Company Name", flex: 4 },
-  { label: "Investment", flex: 2 },
-  { label: "Current Value", flex: 2 },
-  { label: "Returns", flex: 2 },
-];
-
-export default function Portfolio() {
+export default function Screen4() {
   return (
     <Layout hideSideNav pageTitle="Mutual Fund Portfolio">
       <Stack
@@ -201,17 +121,16 @@ function PortfolioCard({ data }) {
       direction={["column", "column", "column", "row"]}
       borderTopWidth={["0px", "0px", "0px", "1px"]}
       _light={{
-        bg: ["#F3F4F6", "#F3F4F6", "#F3F4F6", ""],
+        bg: ["#F3F4F6", "#F3F4F6", "#F3F4F6", "transparent"],
         borderColor: "#E5E7EB",
       }}
       _dark={{
-        bg: ["#374151", "#374151", "#374151", ""],
+        bg: ["#374151", "#374151", "#374151", "transparent"],
         borderColor: "#374151",
       }}
       borderRadius={["5px", "5px", "5px", "0px"]}
       px="16px"
       py="12px"
-      bg="gray"
       flex={1}
     >
       <Text fontWeight={["700", "700", "700", "500"]} flex={4}>

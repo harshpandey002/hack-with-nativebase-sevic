@@ -1,28 +1,9 @@
+import { Box, HStack, ScrollView } from "native-base";
 import React from "react";
-import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
-  Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
-  ScrollView,
-} from "native-base";
 import Header from "./Header";
-import SideNav from "./SideNav";
-import BackIcon from "./Icons/BackIcon";
 import MobHeader from "./MobHeader";
 import PageInfo from "./PageInfo";
+import SideNav from "./SideNav";
 
 export default function Layout({ children, hideSideNav, pageTitle }) {
   return (

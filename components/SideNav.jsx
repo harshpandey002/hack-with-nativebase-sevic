@@ -1,36 +1,14 @@
-import React from "react";
 import {
-  Center,
-  useColorMode,
-  Tooltip,
-  IconButton,
-  SunIcon,
-  MoonIcon,
-  Image,
-  HStack,
-  Text,
-  Heading,
   Box,
-  Link,
-  VStack,
-  Button,
-  AspectRatio,
-  View,
+  Center,
+  Image,
   Pressable,
   ScrollView,
+  Text,
+  VStack,
 } from "native-base";
-
-//TODO Constants
-const navLinks = [
-  { label: "Contacts", value: "contacts" },
-  { label: "Groups", value: "groups" },
-  { label: "Notification", value: "notification" },
-  { label: "Order", value: "order" },
-  { label: "Settings", value: "settings" },
-  { label: "Privacy Policies", value: "privacy_policies" },
-  { label: "Help and Support", value: "help_and_support" },
-  { label: "Refer and Earn", value: "refer_and_earn" },
-];
+import React from "react";
+import { navLinks } from "../util/constants";
 
 export default function SideNav() {
   return (
