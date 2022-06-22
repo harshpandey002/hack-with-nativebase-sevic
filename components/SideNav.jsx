@@ -68,7 +68,7 @@ export default function SideNav() {
               _text: { color: "#4C1D95" },
               _dark: { bg: "#1F2937" },
             }}
-            p="8px"
+            p="10px"
           >
             <Text>{link.label}</Text>
           </Pressable>
