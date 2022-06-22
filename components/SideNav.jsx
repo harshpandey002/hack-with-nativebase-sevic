@@ -25,7 +25,6 @@ export default function SideNav() {
         borderColor: "#374151",
       }}
       w={320}
-      h="100%"
     >
       <Center
         borderBottomWidth="1px"
@@ -58,25 +57,23 @@ export default function SideNav() {
           janedoe41@mydomain.com
         </Text>
       </Center>
-      <ScrollView>
-        <VStack p="16px">
-          {navLinks.map((link) => (
-            <Pressable
-              onPress={() => console.log(link.value)}
-              key={link.value}
-              borderRadius="5px"
-              _hover={{
-                bg: "#EDE9FE",
-                _text: { color: "#4C1D95" },
-                _dark: { bg: "#1F2937" },
-              }}
-              p="10px"
-            >
-              <Text>{link.label}</Text>
-            </Pressable>
-          ))}
-        </VStack>
-      </ScrollView>
+      <VStack p="16px">
+        {navLinks.map((link) => (
+          <Pressable
+            onPress={() => console.log(link.value)}
+            key={link.value}
+            borderRadius="5px"
+            _hover={{
+              bg: "#EDE9FE",
+              _text: { color: "#4C1D95" },
+              _dark: { bg: "#1F2937" },
+            }}
+            p="8px"
+          >
+            <Text>{link.label}</Text>
+          </Pressable>
+        ))}
+      </VStack>
 
       <VStack
         borderTopWidth="1px"

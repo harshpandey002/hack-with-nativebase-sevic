@@ -1,6 +1,7 @@
 import { Box, HStack, ScrollView } from "native-base";
 import React from "react";
 import Header from "./Header";
+import BackIcon from "./Icons/BackIcon";
 import MobHeader from "./MobHeader";
 import PageInfo from "./PageInfo";
 import SideNav from "./SideNav";
@@ -30,11 +31,26 @@ export default function Layout({ children, hideSideNav, pageTitle }) {
             m="auto"
           >
             <PageInfo pageTitle={pageTitle} />
-
             {children}
           </Box>
         </HStack>
       </ScrollView>
     </Box>
+  );
+}
+
+function PageInfo({ pageTitle }) {
+  return (
+    <HStack
+      display={["none", "none", "none", "flex"]}
+      alignItems="center"
+      space="14px"
+      marginBottom="16px"
+    >
+      <BackIcon />
+      <Text fontSize="18px" fontWeight="500">
+        {pageTitle}
+      </Text>
+    </HStack>
   );
 }
